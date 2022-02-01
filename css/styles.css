@@ -47,3 +47,37 @@ section:only-child {
 /* add a media query to change layout and order of items */
 
 /* task - position items in this order: 6, 4, 2, 5, 3, 1 */
+
+@media screen and (min-width: 950px) {
+    /* first, go from a 2 col layout to a 3 col layout */
+    section {
+        width: calc(100%/3);
+    }
+
+    /* secondly, change the order of the flex items in the layout */
+    /* by default, every item has an order position of "0" */
+
+    section:last-child {
+        order: 0;
+    }
+
+    section:nth-child(4) {
+        order: 1;
+    }
+
+    section:nth-child(2) {
+        order: 2;
+    }
+
+    section:nth-child(5) {
+        order: 3;
+    }
+
+    section:nth-child(3) {
+        order: 4;
+    }
+
+    section:first-child {
+        order: 5;
+    };
+}
